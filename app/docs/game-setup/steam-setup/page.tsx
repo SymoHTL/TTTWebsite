@@ -2,7 +2,6 @@
 import React from 'react';
 import DocumentationLayout from '../../DocsLayout';
 import CodeBlock from '../../../components/CodeBlock';
-import Table from '../../../components/Table';
 import Link from "next/link";
 
 const SteamSetup = () => {

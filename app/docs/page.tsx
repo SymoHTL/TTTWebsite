@@ -1,11 +1,8 @@
 "use client";
 import React from 'react';
 import DocumentationLayout from './DocsLayout';
-import CodeBlock from '../components/CodeBlock';
 
 const DocHomePage = () => {
-    const sampleCode = `import React from 'react';\n\nfunction App() {\n  return <div>Hello World</div>;\n}\n\nexport default App;`;
-
     return (
         <DocumentationLayout>
             <section id="introduction" className="mb-8">
