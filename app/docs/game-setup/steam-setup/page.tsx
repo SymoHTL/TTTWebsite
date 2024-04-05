@@ -31,14 +31,21 @@ const SteamSetup = () => {
 
                 <p className="text-gray-600 dark:text-gray-300">Launch SteamCMD on your host and use it to download the server files.</p>
 
-                <CodeBlock code={`Steam> login anonymous
-Steam> force_install_dir "/home/steam/traitors_gambit"
-Steam> app_update 2924290 validate
-Steam> exit`} language="bash"/>
+                <CodeBlock code={`force_install_dir "/home/steam/traitors_gambit"
+login anonymous
+app_update 2924290 validate
+exit`} language="bash"/>
 
                 <p className="text-gray-600 dark:text-gray-300">Or</p>
 
-                <CodeBlock code={`steamcmd +login anonymous +force_install_dir "/home/steam/traitors_gambit" +app_update 2924290 +quit`} language="bash"/>
+                <CodeBlock code={`steamcmd +force_install_dir "/home/steam/traitors_gambit" +login anonymous +app_update 2924290 +quit`} language="bash"/>
+
+
+                <p className="text-gray-600 dark:text-gray-300">Finally you need to download the steamclient.so file.</p>
+
+                <CodeBlock code={`mkdir -p ~/.steam/sdk64/
+steamcmd +login anonymous +app_update 1007 +quit
+cp ~/Steam/steamapps/common/Steamworks\\ SDK\\ Redist/linux64/steamclient.so ~/.steam/sdk64/`} language={"bash"}></CodeBlock>
 
 
 

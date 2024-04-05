@@ -31,14 +31,9 @@ const ServerSetup = () => {
 
             <section id="Configuration" className="mb-8">
                 <h2 className="text-2xl font-bold dark:text-white">Configuration</h2>
-                <p className="text-gray-600 dark:text-gray-300">Create a script to launch the server with your desired options and settings. For simplicity&apos;s sake, place it in the same folder where the server files were downloaded. On Windows, this is a batch file; on Linux, this is a shell script. Examples are provided below. For both platforms, the server options are specified with the same basic syntax.</p>
+                <p className="text-gray-600 dark:text-gray-300">Configurations files are located in the cfg folder, some files will be generated after first launch</p>
 
-                <CodeBlock code={`
-                start ShooterGameServer.exe exit`} language="bash"></CodeBlock>
 
-                <p className="text-gray-600 dark:text-gray-300">On Linux, after creating the script, make it executable:</p>
-
-                <CodeBlock code={"chmod +x server_start.sh"} language="bash"></CodeBlock>
 
             </section>
 
